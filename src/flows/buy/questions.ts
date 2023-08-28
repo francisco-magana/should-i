@@ -16,5 +16,21 @@ export const questions: Question[] = [
             }
         ]
 
+    },
+    {
+        text: "Do you already have something similar?",
+        answered: false,
+        chosenYes: null,
+        options: [
+            {
+                text: "No",
+                value: false
+            },
+            {
+                text: "Yes",
+                value: true
+            }
+        ]
+
     }
 ]
