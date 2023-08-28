@@ -1,4 +1,11 @@
-export type Question = {
+export type flow = {
+    [key: string]: {
+        questions: question[]
+    }
+}
+
+export type question = {
+    id: number;
     text: string;
     answered: boolean;
     chosenYes: boolean | null;

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import{ question } from "../../../types/types";
 
 @Component({
   selector: 'app-question',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent {
+
+  @Input() question: question | undefined;
 
 }
