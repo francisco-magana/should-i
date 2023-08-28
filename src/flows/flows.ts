@@ -1,4 +1,4 @@
-import { question, flow } from "../types/types";
+import { flow } from "../types/types";
 
 export const flows: flow = {
     "buy": {
