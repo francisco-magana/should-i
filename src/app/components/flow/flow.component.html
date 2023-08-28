@@ -1,3 +1,6 @@
-<div>
-    <app-question [question]="question" *ngFor="let question of flow_questions"></app-question>
+<div [ngSwitch]="current_step">
+    <app-question *ngSwitchCase="steps.QUESTIONS" (selected_option)="nextQuestion($event)" [question]="current_question"></app-question>
+    <div *ngSwitchCase="steps.RESULT">
+        {{result.text}}
+    </div>
 </div>

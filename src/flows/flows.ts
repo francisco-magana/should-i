@@ -17,7 +17,9 @@ export const flows: flow = {
                         text: "Yes",
                         value: true
                     }
-                ]
+                ],
+                yesNextQuestionID: -1,
+                noNextQuestionID: 2
             },
             {
                 id: 2,
@@ -33,7 +35,16 @@ export const flows: flow = {
                         text: "Yes",
                         value: true
                     }
-                ]
-            }]
+                ],
+                yesNextQuestionID: 0,
+                noNextQuestionID: 0
+            }
+        ],
+        positiveEnd: {
+            text: "Buy It."
+        },
+        negativeEnd: {
+            text: "Don't buy it."
+        }
     }
 }

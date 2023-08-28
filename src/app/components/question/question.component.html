@@ -1,3 +1,9 @@
-<p class="question">
-    {{question?.text || "Sin pregunta"}}
-</p>
+<div>
+    <p class="question">
+        {{question?.text || "Sin pregunta"}}
+    </p>
+    <div class="options-container">
+        <button class="btn btn-yes" (click)="emitSelectedOption(question?.options![0].value)">{{question?.options![0].text || "error"}}</button>
+        <button class="btn btn-no" (click)="emitSelectedOption(question?.options![1].value)">{{question?.options![1].text || "error"}}</button>
+    </div>
+</div>

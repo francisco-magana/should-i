@@ -1,7 +1,11 @@
 export type flow = {
-    [key: string]: {
-        questions: question[]
-    }
+    [key: string]: flow_data
+}
+
+export type flow_data = {
+    questions: question[],
+    positiveEnd: flowEnd,
+    negativeEnd: flowEnd
 }
 
 export type question = {
@@ -10,9 +14,15 @@ export type question = {
     answered: boolean;
     chosenYes: boolean | null;
     options: option[];
+    yesNextQuestionID: number;
+    noNextQuestionID: number;
 }
 
 export type option = {
     text: string;
     value: string | boolean;
+}
+
+export type flowEnd = {
+    text: string;
 }

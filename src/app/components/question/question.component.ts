@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import{ question } from "../../../types/types";
 
 @Component({
@@ -9,5 +9,10 @@ import{ question } from "../../../types/types";
 export class QuestionComponent {
 
   @Input() question: question | undefined;
+  @Output() selected_option: any = new EventEmitter<any>();
+
+  emitSelectedOption(value: any) {
+    this.selected_option.emit(value);
+  }
 
 }
