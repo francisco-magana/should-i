@@ -1,5 +1,10 @@
-<div class="app-container">
-  <app-title></app-title>
-  <button class="btn btn-primary">Start</button>
-  <app-flow flow="buy"></app-flow>
+
+<div class="container" [ngSwitch]="current_step">
+  <div class="container" *ngSwitchCase="steps.SHOW_TITLE">
+    <app-title></app-title>
+    <button (click)="startQuestions()" class="btn btn-primary">Start</button>
+  </div>
+  <div *ngSwitchCase="steps.QUESTIONS">
+    <app-flow flow="buy"></app-flow>
+  </div>
 </div>
