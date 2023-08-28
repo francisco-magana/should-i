@@ -4,6 +4,20 @@
     font-size: 6rem;    
 }
 
+.description {
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: center;
+    width: 70%;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .green-text {
     color: #1DB954;
 }
