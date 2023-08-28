@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './components/ui/title/title.component';
 import { QuestionComponent } from './components/question/question.component';
+import { FlowComponent } from './components/flow/flow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
-    QuestionComponent
+    QuestionComponent,
+    FlowComponent
   ],
   imports: [
     BrowserModule,
