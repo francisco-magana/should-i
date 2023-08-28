@@ -1,6 +1,6 @@
 <div [ngSwitch]="current_step">
     <app-question *ngSwitchCase="steps.QUESTIONS" (selected_option)="nextQuestion($event)" [question]="current_question"></app-question>
-    <div *ngSwitchCase="steps.RESULT">
+    <div [ngClass]="is_positive_end ? 'end-positive' : 'end-negative'" *ngSwitchCase="steps.RESULT">
         {{result.text}}
     </div>
 </div>

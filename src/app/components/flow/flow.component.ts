@@ -21,6 +21,7 @@ export class FlowComponent {
   steps = steps;
   current_step = steps.QUESTIONS;
   result: any;
+  is_positive_end: boolean = false;
 
   constructor() {
     this.flow = flows[this.required_flow];
@@ -33,10 +34,12 @@ export class FlowComponent {
 
     switch(nextID) {
       case FLOW_ENDS.POSITIVE_END: 
+        this.is_positive_end = true;
         this.current_step = steps.RESULT;
         this.result = this.flow.positiveEnd;
         break;
       case FLOW_ENDS.NEGATIVE_END:
+        this.is_positive_end = false;
         this.current_step = steps.RESULT;
         this.result = this.flow.negativeEnd;
         break;
