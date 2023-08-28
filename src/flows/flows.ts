@@ -36,7 +36,7 @@ export const flows: flow = {
                         value: true
                     }
                 ],
-                yesNextQuestionID: 0,
+                yesNextQuestionID: -1,
                 noNextQuestionID: 0
             }
         ],
