@@ -10,3 +10,22 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.btn {
+    border: 0;
+    padding: 8px 64px;
+    border-radius: 32px;
+    font-size: 1.3rem;
+    transition: 0.3s;
+
+    &-primary {
+        background-color: #F9D03B;
+        color: white;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+}
