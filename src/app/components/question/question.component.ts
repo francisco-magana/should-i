@@ -10,9 +10,11 @@ export class QuestionComponent {
 
   @Input() question: question | undefined;
   @Output() selected_option: any = new EventEmitter<any>();
+  audio: HTMLAudioElement = new Audio('https://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3');
 
   emitSelectedOption(value: any) {
     this.selected_option.emit(value);
+    this.audio.play()
   }
 
 }
