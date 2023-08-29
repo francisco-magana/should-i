@@ -38,3 +38,23 @@ body {
     }
 
 }
+
+@media screen and (max-width: 1024px) and (min-width: 426px) {
+    
+    html {
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    
+    html {
+        font-size: 9px;
+    }
+
+    .btn {
+        padding: 8px 48px;
+    }
+
+}
