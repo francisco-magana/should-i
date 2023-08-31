@@ -1,4 +1,10 @@
-# ShouldI
+# Should I
+
+Should I is an application to take decisions to problems by answering flows of yes/no questions. At the moment only "Should I Buy it" flow is available but I want to implement more in a future.
+
+It is a basic web application, only clone the repository, install dependencies and run the server to use it. Feel free to fork or contribute with your own ideas.
+
+# Angular CLI generated text
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
