@@ -1,8 +1,11 @@
 <div [ngSwitch]="current_step">
     <app-question @enter *ngSwitchCase="steps.QUESTIONS"
         (selected_option)="nextQuestion($event)" [question]="current_question"></app-question>
-    <div @enter [ngClass]="is_positive_end ? 'end-positive' : 'end-negative'"
+    <div @enter [ngClass]="is_positive_end ? 'end-positive' : 'end-negative'" class="container"
         *ngSwitchCase="steps.RESULT">
-        {{result.text}}
+        <div>
+            {{result.text}}
+        </div>
+        <button (click)="restartApp()" class="btn btn-primary">Restart</button>
     </div>
 </div>

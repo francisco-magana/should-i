@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { flows } from "../../../flows/flows";
 import { question, flow_data } from "../../../types/types";
 import { FLOW_ENDS } from "./flow.constants";
@@ -35,6 +35,7 @@ enum steps {
 })
 export class FlowComponent {
   @Input() required_flow: string = "buy";
+  @Output() restart: any = new EventEmitter<any>();
   flow: flow_data;
   flow_questions: question[];
   current_question: question;
@@ -71,6 +72,10 @@ export class FlowComponent {
         break;
     }
 
+  }
+
+  restartApp() {
+    this.restart.emit(true);
   }
 
 }

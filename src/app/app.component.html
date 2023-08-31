@@ -5,7 +5,7 @@
       <button (click)="startQuestions()" class="btn btn-primary">Start</button>
     </div>
     <div *ngSwitchCase="steps.QUESTIONS">
-      <app-flow flow="buy"></app-flow>
+      <app-flow (restart)="restartApp()" flow="buy"></app-flow>
     </div>
     <div *ngSwitchCase="steps.SHOW_TITLE" class="about-section">
       Made with &hearts; by Francisco Magaña

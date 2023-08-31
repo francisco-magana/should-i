@@ -18,4 +18,8 @@ export class AppComponent {
     this.current_step = this.steps.QUESTIONS;
   }
 
+  restartApp() {
+    this.current_step = steps.SHOW_TITLE;
+  }
+
 }
